@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <form action="/home/Registration/" method="post">
+
+            Branch code <input type="text" name="BranchCode" value="@Model.BranchCode" /><br />
+
+            Branch Name* <input type="text" name="Brachname"value=" @Model.Brachname" /><br />
+
+            Short Name <input type="text" name="shortName"value=" @Model.shortName" /><br />
+
+            Address  <textarea name="Address"value=" @Model.Address"></textarea><br />
+
+            City  <select name="City"value=" @Model.City">
+                <option>Select</option>
+                <option>Sultanpur</option>
+                <option>Lucknow</option>
+                <option>Gorakhpur</option>
+            </select><br />
+
+            Pin Code  <input type="number" name="pinCode"value=" @Model.pinCode" /><br />
+
+            Zone  <input type="text" name="Zone"value=" @Model.Zone" /><br />
+
+            Contact Person <input type="number" name="ContactPerson"value=" @Model.ContactPerson "/><br />
+
+            Email Id  <input type="text" name="EmailId"value=" @Model.EmailId" /><br />
+
+            Hub <input type="checkbox" name="Hub" value="1" @Model.Hub /><br />
+
+            Vendor  <input type="checkbox" name="Vender" value="1" @Model.Vender />
+
+
+            Active  <input type="checkbox" name="Active" value="1" @Model.Active /><br />
+
+            <input type="submit" />
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div clss="contaner">
+        <div class="row">
+            <div class="clm-sm-12" style="background:grey">
+                <div class="clm-sm-12">
+                    <nav class="navbar navbar-light bg-light">
+                        <span class="navbar-brand mb-0 h1">Navbar</span>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div>
+
+        <form action="/home/Registration/" method="post">
+
+            Branch code <input type="text" name="BranchCode" /><br />
+
+            Branch Name* <input type="text" name="Brachname" /><br />
+
+            Short Name <input type="text" name="shortName" /><br />
+
+            Address  <textarea name="Address"></textarea><br />
+
+            City  <select name="City">
+                <option>Select</option>
+                <option>Sultanpur</option>
+                <option>Lucknow</option>
+                <option>Gorakhpur</option>
+            </select><br />
+
+            Pin Code  <input type="number" name="pinCode" /><br />
+
+            Zone  <input type="text" name="Zone" /><br />
+
+            Contact Person <input type="number" name="ContactPerson" /><br />
+
+            Email Id  <input type="text" name="EmailId" /><br />
+
+            Hub <input type="checkbox" name="Hub" value="1" /><br />
+
+            Vendor  <input type="checkbox" name="Vender" value="1" />
+
+
+            Active  <input type="checkbox" name="Active" value="1" /><br />
+
+            <input type="submit" />
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

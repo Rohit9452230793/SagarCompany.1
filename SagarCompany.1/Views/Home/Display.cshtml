@@ -1,0 +1,63 @@
+﻿@using System.Data;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display</title>
+</head>
+<body>
+    <div>
+        <h1>Display Student Record</h1>
+        <table>
+            <tr>
+                <th>S_id</th>
+                <th>BranchCode</th>
+                <th>Brachname</th>
+                <th>shortName</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>pinCode</th>
+                <th>Zone</th>
+                <th>ContactPerson</th>
+                <th>EmailId</th>
+                <th>Hub</th>
+                <th>Vender</th>
+                <th>Active</th>
+            </tr>
+            @{
+                DataTable dt = (DataTable)ViewBag.Data;
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        <tr>
+                            <td>@(i + 1)</td>
+                            <td>@dt.Rows[i]["BranchCode"]</td>
+                            <td>@dt.Rows[i]["Brachname"]</td>
+                            <td>@dt.Rows[i]["shortName"]</td>
+                            <td>@dt.Rows[i]["Address"]</td>
+                            <td>@dt.Rows[i]["City"]</td>
+                            <td>@dt.Rows[i]["pinCode"]</td>
+                            <td>@dt.Rows[i]["Zone"]</td>
+                            <td>@dt.Rows[i]["ContactPerson"]</td>
+                            <td>@dt.Rows[i]["EmailId"]</td>
+                            <td>@dt.Rows[i]["Hub"]</td>
+                            <td>@dt.Rows[i]["Vender"]</td>
+                            <td>@dt.Rows[i]["Active"]</td>
+
+                            <td><a href="/Home/DeleteStudentRecord?id=@dt.Rows[i]["S_id"]">Delete</a></td>
+                            <td><a href="/Home/StudentRagistrationEdite?id=@dt.Rows[i]["S_id"]">Edit</a></td>
+                        </tr>
+                    }
+                }
+
+            }
+        </table>
+    </div>
+</body>
+</html>
